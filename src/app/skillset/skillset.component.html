@@ -1,12 +1,14 @@
-<p class="h1">Skillset works</p>
- <p class="h2">Technical Stack</p>
- <ul>
-  <li >Frontend: Angular, Angular Material, RxJS, TypeScript, JavaScript, HTML/CSS</li>
-  <li >Backend: Node.js, Express.js, GraphQL, REST APIs</li>
-  <li >Cloud & DevOps: AWS Lambda, DynamoDB, Git</li>
-  <li >Databases: PostgreSQL, MySQL</li>
-  <li >Testing & Tools: Jest, NPM, GitHub</li>
-</ul>
+<section class="py-5">
+ <section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-success mb-4">Skills</h2>
+    <div class="row row-cols-2 row-cols-md-5 g-3">
+     @for (skill of skills;track skill){
+      <div class="col">
+        <div class="card p-3 text-center shadow-sm">{{ skill }}</div>
+      </div>
+    }
+    </div>
+  </div>
+</section>
 
-<p class="h2">Programming Languages</p>
-<p >JavaScript, TypeScript, Java, C</p>

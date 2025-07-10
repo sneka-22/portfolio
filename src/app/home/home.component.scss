@@ -1,0 +1,85 @@
+.hero-section {
+  height: 100vh;
+  background: radial-gradient(circle at center, #e6f4ea, #f2fbe8);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #8bc34a;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2f3e46;
+}
+
+.hero-desc {
+  max-width: 600px;
+  color: #2f3e46;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+.btn.custom-btn-green {
+  background-color: #a3d977;
+  color: white;
+  font-weight: 600;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn.custom-btn-white {
+  background-color: white;
+  color: #56ab2f;
+  font-weight: 600;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+}
+ .circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.circle-1 {
+  width: 80px;
+  height: 80px;
+  top: 60px;
+  left: 60px;
+  background: #d0edb3;
+}
+
+.circle-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 60px;
+  right: 100px;
+  background: #c8e6c9;
+}
+
+.circle-3 {
+  width: 40px;
+  height: 40px;
+  top: 71px;
+  right: 30px;
+  background: #aed581;
+}
+
+.circle-4 {
+  width: 60px;
+  height: 60px;
+  bottom: 90px;
+  left: 100px;
+  background: #dcedc8;
+}
+
+.circle-5 {
+  width: 30px;
+  height: 30px;
+  top: 70%;
+  right: 20%;
+  background: #e0f2f1;
+}
