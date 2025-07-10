@@ -28,26 +28,34 @@
 .btn.custom-btn-green {
   background-color: #a3d977;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius:30px
+}
+.btn.custom-btn-green:hover{
+  --tw-bg-opacity: 1
 }
 
 .btn.custom-btn-white {
   background-color: white;
   color: #56ab2f;
-  font-weight: 600;
+  font-weight: 500;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius:30px
+
 }
  .circle {
   position: absolute;
   border-radius: 50%;
   opacity: 0.3;
+    pointer-events: none;
+  animation: float 8s ease-in-out infinite;
 }
 
 .circle-1 {
   width: 80px;
   height: 80px;
-  top: 60px;
+  top: 80px;
   left: 60px;
   background: #d0edb3;
 }
@@ -55,7 +63,7 @@
 .circle-2 {
   width: 100px;
   height: 100px;
-  bottom: 60px;
+  bottom: 70px;
   right: 100px;
   background: #c8e6c9;
 }
@@ -63,7 +71,7 @@
 .circle-3 {
   width: 40px;
   height: 40px;
-  top: 71px;
+  top: 75px;
   right: 30px;
   background: #aed581;
 }
@@ -79,7 +87,15 @@
 .circle-5 {
   width: 30px;
   height: 30px;
-  top: 70%;
-  right: 20%;
-  background: #e0f2f1;
+  top: 270px;
+  right: 30px;
+  background: #e0f2e8;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
 }
