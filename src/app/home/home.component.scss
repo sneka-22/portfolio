@@ -30,21 +30,34 @@
   color: white;
   font-weight: 500;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius:30px;
-  margin-left:10px
+  border-radius: 30px;
+  margin-left: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.btn.custom-btn-green:hover{
-  --tw-bg-opacity: 1
+
+.btn.custom-btn-green:hover {
+  background-color: #94cd61; 
+  transform: scale(1.05); 
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .btn.custom-btn-white {
-  background-color: white;
+  background-color: whitesmoke;
   color: #56ab2f;
   font-weight: 500;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius:30px;
-     margin-left:20px
+  border-radius:30px;
+  margin-left:20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+
+}
+.btn.custom-btn-white:hover {
+  background-color: white; 
+  transform: scale(1.05); 
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
  .circle {
   position: absolute;

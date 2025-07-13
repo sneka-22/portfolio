@@ -1,2 +1,23 @@
 
 
+
+.card {
+
+  box-shadow:5px 5px 35px  rgba(0, 0, 0,0.1);
+   transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+    border-radius: 1rem;
+}
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 55px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
