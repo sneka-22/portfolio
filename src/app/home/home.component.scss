@@ -31,7 +31,7 @@
   font-weight: 500;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  margin-left: 10px;
+  // margin-left: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -48,7 +48,7 @@
   font-weight: 500;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius:30px;
-  margin-left:20px;
+  // margin-left:20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 
@@ -63,8 +63,12 @@
   position: absolute;
   border-radius: 50%;
   opacity: 0.3;
-    pointer-events: none;
+  pointer-events: none;
   animation: float 8s ease-in-out infinite;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 120px;
+  max-height: 120px;
 }
 
 .circle-1 {

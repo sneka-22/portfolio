@@ -1,6 +1,4 @@
 
-
-
 .card {
 
   box-shadow:5px 5px 35px  rgba(0, 0, 0,0.1);
@@ -21,3 +19,5 @@
     cursor: pointer;
   }
 }
+
+// Removed all @media queries for responsiveness. Use Bootstrap classes (w-100, px-2, etc.) in HTML instead.

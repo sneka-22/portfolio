@@ -1,16 +1,43 @@
-.divclass{
- 
- background-color: rgb(255, 255, 255);
+.divclass {
+  background-color: rgba(255, 255, 255, 0.782);
   height:50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: auto;
+  }
 }
-.nav-link{
-  color:black
+
+.nav {
+  flex-wrap: wrap;
+  @media (max-width: 576px) {
+    width: 100%;
+    justify-content: flex-start !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.nav-link {
+  color:black;
+  padding-right: 10px;
+  @media (max-width: 576px) {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
 }
 .nav-link:hover{    
   opacity: 1;
   color: rgb(142 183 101 / var(--tw-bg-opacity, 1));
 }
-.name-bar{
+.name-bar {
  padding-left: 50px;
  padding-top:12px;
   background: linear-gradient(to right, #8FC867, #DCEB98);
@@ -18,7 +45,12 @@
   color: transparent;
   font-weight: 700;
   font-size: 1.5rem;
-  height:40px
+  height:40px;
+  @media (max-width: 576px) {
+    padding-left: 0;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
 }
 .nav-link.active {
   font-weight: 600;
@@ -28,6 +60,6 @@
 .sticky-banner {
   position: sticky;
   top: 0;
-  z-index: 1050; // Bootstrap navbar default
-  background: white; // or your gradient
+  z-index: 1050; 
+  background: white; 
 }
