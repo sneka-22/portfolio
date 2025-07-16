@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ContactService } from '../contact.service';
+
+declare var window: any; // Add this at the top of your component
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +14,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class ContactComponent {
  contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  @ViewChild('successToast') successToast!: ElementRef;
+  @ViewChild('errorToast') errorToast!: ElementRef;
+
+  constructor(private fb: FormBuilder,private contactService:ContactService) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -21,11 +27,25 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Form Submitted', this.contactForm.value);
-      alert('Message sent successfully!');
-      this.contactForm.reset();
+      this.contactService.sendMessage(this.contactForm.value).subscribe({
+        next: (response) => {
+          // Show success toast
+          this.showToast('success');
+          this.contactForm.reset();
+        },
+        error: (error) => {
+          // Show error toast
+          this.showToast('error');
+        }
+      });
     } else {
       this.contactForm.markAllAsTouched();
     }
+  }
+
+  showToast(type: 'success' | 'error') {
+    const toastEl = type === 'success' ? this.successToast.nativeElement : this.errorToast.nativeElement;
+    const toast = new window.bootstrap.Toast(toastEl);
+    toast.show();
   }
 }

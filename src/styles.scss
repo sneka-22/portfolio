@@ -19,5 +19,6 @@
     cursor: pointer;
   }
 }
-
-// Removed all @media queries for responsiveness. Use Bootstrap classes (w-100, px-2, etc.) in HTML instead.
+.toast {
+  z-index: 2000 !important; // higher than Bootstrap modal (1055) and most cards
+}
