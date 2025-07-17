@@ -1,9 +1,17 @@
 .hero-section {
-  height: 100vh;
+  height: 80vh;
   background: radial-gradient(circle at center, #e6f4ea, #f2fbe8);
   position: relative;
   overflow: hidden;
   padding: 2rem;
+}
+
+.hero-desktop {
+  height: 100vh;
+}
+
+.hero-mobile {
+  height: 80vh;
 }
 
 .hero-title {

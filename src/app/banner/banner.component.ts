@@ -39,12 +39,22 @@ export class BannerComponent {
     }
 
     this.sections.forEach(id => {
+      // Desktop nav
       const link = document.getElementById('link-' + id);
       if (link) {
         if (id === currentSection) {
           link.classList.add('active');
         } else {
           link.classList.remove('active');
+        }
+      }
+      const mobileLink = document.getElementById('link-' + id + '-mobile');
+      if (mobileLink) {
+        if (id === currentSection) {
+          mobileLink.classList.add('active');
+          mobileLink.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } else {
+          mobileLink.classList.remove('active');
         }
       }
     });

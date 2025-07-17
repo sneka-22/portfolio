@@ -1,65 +1,82 @@
 .divclass {
   background-color: rgba(255, 255, 255, 0.782);
-  height:50px;
+  height: 50px;
   padding-right: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 576px) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-right: 10px;
-    padding-left: 10px;
-    height: auto;
-  }
 }
 
-.nav {
-  flex-wrap: wrap;
-  @media (max-width: 576px) {
-    width: 100%;
-    justify-content: flex-start !important;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.nav-link {
-  color:black;
-  padding-right: 10px;
-  @media (max-width: 576px) {
-    font-size: 1rem;
-    padding: 0.5rem 0.5rem;
-  }
-}
-.nav-link:hover{    
-  opacity: 1;
-  color: rgb(142 183 101 / var(--tw-bg-opacity, 1));
-}
 .name-bar {
- padding-left: 50px;
- padding-top:12px;
+  padding-left: 50px;
+  padding-top: 12px;
   background: linear-gradient(to right, #8FC867, #DCEB98);
   background-clip: text;
   color: transparent;
   font-weight: 700;
   font-size: 1.5rem;
-  height:40px;
-  @media (max-width: 576px) {
-    padding-left: 0;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
+  height: 40px;
 }
+
+.nav {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  position: static;
+  width: auto;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: white;
+  z-index: 2000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  padding: 0.5rem 0;
+  margin: 0;
+  border-top: 1px solid #eee;
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap !important;
+}
+
+.mobile-bottom-nav .nav-item {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.nav-item {
+  width: auto;
+  text-align: center;
+}
+
+.nav-link {
+  color: black;
+  padding-right: 10px;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: rgb(142 183 101 / var(--tw-bg-opacity, 1));
+}
+
 .nav-link.active {
   font-weight: 600;
   color: #2e7d32 !important;
   border-bottom: 2px solid #2e7d32;
 }
+
 .sticky-banner {
   position: sticky;
   top: 0;
-  z-index: 1050; 
-  background: white; 
+  z-index: 1050;
+  background: white;
 }
